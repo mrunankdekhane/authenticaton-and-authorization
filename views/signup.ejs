@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signup-container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      width: 350px;
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 8px 0 4px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input, select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    input:focus, select:focus {
+      border-color: #2575fc;
+      outline: none;
+      box-shadow: 0 0 5px rgba(37, 117, 252, 0.4);
+    }
+
+    button {
+      margin-top: 16px;
+      padding: 12px;
+      background: #2575fc;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #1b5fd9;
+    }
+
+    /* Responsive */
+    @media (max-width: 400px) {
+      .signup-container {
+        width: 90%;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Signup</h2>
+    <form method="post" action="/signup">
+      <label for="email">User Email</label>
+      <input type="email" placeholder="Enter your email" name="email" id="email" required>
+
+      <label for="name">User Name</label>
+      <input type="text" placeholder="Enter your name" name="name" id="name" required>
+
+      <label for="role">User Role</label>
+      <select name="role" id="role" required>
+        <option value="">-- Select Role --</option>
+        <option value="USER">User</option>
+        <option value="ADMIN">Admin</option>
+      </select>
+
+      <label for="password">Password</label>
+      <input type="password" placeholder="Enter your password" name="password" id="password" required>
+
+      <button type="submit">Signup</button>
+    </form>
+  </div>
+</body>
+</html>
